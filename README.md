@@ -108,12 +108,19 @@ r.Route("/api", func(api chi.Router) {
 ### 📋 Результаты тестирования
 Маршрут	Метод	Запрос	Ожидаемый ответ	Фактический ответ
 `/health	GET`	-	200 OK	200 OK
+
 `/api/tasks	GET`	-	200 OK
+
 `/api/tasks	POST	{"title":"Тест"}` -	201 Created
+
 `/api/tasks/1	GET`	-	200 OK
+
 `/api/tasks/1	PUT	{"title":"Название","done":true}` -	200 OK
+
 `/api/tasks/1	DELETE`	-	204 No Content
+
 `/api/tasks/999	GET`	-	404 Not Found
+
 `/api/tasks	POST	{"title":""}` -	400 Bad Request
 
 ## 📸 Отчетные материалы
